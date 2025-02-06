@@ -16,7 +16,6 @@ jobs:
           sudo apt-get remove google-chrome-stable
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
-          docker rmi $(docker image ls -aq)
           df -h
 
       - uses: actions/checkout@v3
