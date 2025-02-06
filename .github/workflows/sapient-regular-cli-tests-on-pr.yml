@@ -16,7 +16,6 @@ jobs:
           sudo apt-get remove google-chrome-stable
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
-          docker rmi $(docker image ls -aq)
           df -h
 
       - uses: actions/checkout@v3
@@ -43,7 +42,7 @@ jobs:
           version: '>= 363.0.0'
 
       - name: Download BaseRock cli test generation and execution jar
-        run: gsutil cp gs://ai-sapient-cli/baserock-cli-20241120.4.jar baserock-cli.jar
+        run: gsutil cp gs://ai-sapient-cli/baserock-cli-20250206.2.jar baserock-cli.jar
 
       - name: Execute all tests for the module
         env:
@@ -55,7 +54,7 @@ jobs:
         run: mvn clean test
 
       - name: Upload Jacoco Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
           path: target/jacocoHtml
