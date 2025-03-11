@@ -350,13 +350,4 @@
         </profile>
     </profiles>
 
-    <dependencies>
-        <dependency>
-            <groupId>ai.baserock.unit</groupId>
-            <artifactId>baserock-cli</artifactId>
-            <version>LATEST</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/baserock-cli.jar</systemPath>
-        </dependency>
-    </dependencies>
 </project>
