@@ -139,10 +139,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLITestGeneratorMaven</argument>
                             </arguments>
                         </configuration>
@@ -155,10 +154,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLICompileMaven</argument>
                             </arguments>
                         </configuration>
@@ -171,11 +169,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
-                            <classpathScope>test</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLIExecutorMaven</argument>
                             </arguments>
                         </configuration>
@@ -350,13 +346,4 @@
         </profile>
     </profiles>
 
-    <dependencies>
-        <dependency>
-            <groupId>ai.baserock.unit</groupId>
-            <artifactId>baserock-cli</artifactId>
-            <version>LATEST</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/baserock-cli.jar</systemPath>
-        </dependency>
-    </dependencies>
 </project>
