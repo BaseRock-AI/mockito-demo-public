@@ -140,10 +140,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLITestGeneratorMavenCodeless</argument>
                             </arguments>
                         </configuration>
@@ -156,10 +155,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLICompileMavenCodeless</argument>
                             </arguments>
                         </configuration>
@@ -172,11 +170,9 @@
                         </goals>
                         <configuration>
                             <executable>java</executable>
-                            <classpathScope>compile</classpathScope>
-                            <classpathScope>test</classpathScope>
                             <arguments>
                                 <argument>-classpath</argument>
-                                <classpath />
+                                <argument>${project.basedir}/baserock-cli.jar${path.separator}${project.build.outputDirectory}</argument>
                                 <argument>ai.baserock.unit.CLIExecutorMavenCodeless</argument>
                             </arguments>
                         </configuration>
